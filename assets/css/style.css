@@ -1,0 +1,67 @@
+.body{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: #47ccc4;
+}
+.navbar-dark{
+    background-color: #245454;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #8ca4ac;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,.75);
+}
+.article {
+    width: 200px;  /* Ajusta el ancho  */
+    background: #FFFFFF;  /* Fondo blanco para el artículo */
+    padding: 10px;  /* Espaciado interior */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Sombra ligera para destacar el artículo */
+    border-radius: 5px;  /* Bordes redondeados */
+}
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;  /* Espacio entre elementos */
+}
+.contact-item h5 {
+    margin: 0 0 0 10px;  /* Espacio entre el ícono y el texto */
+    font-size: 16px;  /* Tamaño de fuente ajustado */
+}
+.fa-phone, .fa-envelope, .fa-linkedin, .fa-github, .fa-instagram {
+    color: #4A90E2;  /* Color del ícono */
+}
+.titulo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #cbd6c7;
+}
+.row__img{
+    width: 35%;
+}
+.contenedor{
+    margin-top: 30px;
+}
+.contenedor__proyectos{
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+.contenedor__proyectos--img{
+    width: 100%;
+}
+.contenedor__Contacto{
+    margin-top: 30px;
+}
+.contenedor__form{
+    margin-bottom: 10px;
+}
+.fila{
+    margin-top: 20px; 
+    margin-bottom: 20px;
+}
+.form-control__email{
+    margin-bottom: 10px;
+}
+.form-control__textarea{
+    margin-bottom: 10px;
+}

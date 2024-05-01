@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>desafio guiado 02</title>
   <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/personal.css">
+
   <script src="https://kit.fontawesome.com/604374b1e0.js" crossorigin="anonymous"></script>
   <link rel="assets/img/logo.png" href="favicon.ico" type="image/x-icon">
   <!-- FontAwesome -->
@@ -36,6 +36,28 @@
 h6 {
   margin-top: 10px; /* Espacio entre la imagen y el nombre */
 }
+.contact-info .contact-item {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Espacio entre el ícono y el texto */
+}
+
+.contact-info i {
+  color: #333; /* O el color que prefieras */
+  font-size: 24px; /* Ajusta el tamaño de los íconos */
+}
+
+.contact-info h5 {
+  margin: 0; /* Elimina márgenes adicionales para una alineación limpia */
+}
+
+.form-group {
+  padding: 20px;
+  background-color: #4e4f51;
+  border-radius: 5px; /* Estilos opcionales para dar estilo al formulario */
+}
+
 
   </style>
 </head>
@@ -258,100 +280,71 @@ h6 {
 </section>
 
 <!--contacto-->
-<section class="container contenedor__contacto"  >
-  <h2 class="text-center">Contacto </h2>
-  <div class="row fila" >
-      
-      <article class="col-md-6 col-12" >
-          <form action="submit" class="form-group">
-              <div id="liveAlertPlaceholder" class="row g-3 align-items-center contenedor__form" >
-                  
-                  <div class="col-6">
-                    <label for="usuario" class="form-label">Usuario</label>
-      <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right"
-        data-bs-title="Aqui va el contenido del tooltip"></i>
-      <input type="email" class="form-control" id="usuario">
-                  </div>
-                  
-                    <div class="col-6 ">
-                      <label for="exampleFormControlInput1" class="form-label">Email</label>
-      <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right"
-        data-bs-title="Aqui va el contenido del tooltip"></i>
-      <input type="email" class="form-control" id="exampleFormControlInput1">
-                    </div>
-                  
-                </div>
-                <div class="col-12">
-                  <input type="email" class="form-control form-control__email" placeholder="Correo Electrónico" >
-                </div>
-                <div class="col-12">
-                  <textarea name="" id="" cols="30" rows="10" class="form-control form-control__textarea" ></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary mb-3">Enviar</button>
-          </form>
-      </article>
-      <article class="col-md-6 col-12">
-          <article class="article">
-              <div class="contact-item">
-                  <i class="fa-solid fa-phone"></i>
-                  <h5>+56999887766</h5>
-              </div>
-              <div class="contact-item">
-                  <i class="fa-solid fa-envelope"></i>
-                  <h5>tumail@gmail.com</h5>
-              </div>
-              <div class="contact-item">
-                  <i class="fa-brands fa-linkedin"></i>
-                  <h5>tulinkedin</h5>
-              </div>
-              <div class="contact-item">
-                  <i class="fa-brands fa-github"></i>
-                  <h5>Tu Github</h5>
-              </div>
-              <div class="contact-item">
-                  <i class="fa-brands fa-square-instagram"></i>
-                  <h5>Tu Instagram</h5>
-              </div>
-          </article>
-          
-      
-      
-     
+<section class="container">
+  <h2 style="text-align: center;">Contacto</h2>
+  <hr style="height: 2px;">
+
+  <div class="row">
+    <!-- Formulario de contacto -->
+    <article class="col-md-6 col-12">
+      <form action="#" method="POST" class="form-group">
+        <div class="row g-3 align-items-center">
+          <div class="col-6">
+            <label for="usuario" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="usuario">
+          </div>
+          <div class="col-6">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1">
+          </div>
+          <div class="col-12">
+            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <label class="form-check-label text-decoration-underline" for="flexCheckDefault">
+                Acepto los términos y condiciones
+              </label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </article>
+
+    <!-- Información de contacto -->
+    <article class="col-md-6 col-12">
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <h5>+56999887766</h5>
+        </div>
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <h5>contacto@viajeschile.com</h5>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-linkedin"></i>
+          <h5>ViajesChile</h5>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-github"></i>
+          <h5>viajes_chile</h5>
+        </div>
+        <div class="contact-item">
+          <i class="fa-brands fa-square-instagram"></i>
+          <h5>viajes_chile</h5>
+        </div>
+      </div>
+    </article>
   </div>
- </section>
-  <!-- Formulario de contacto-->
-  <form action="">
-    <h2>Contacto</h2>
-    <div id="liveAlertPlaceholder"></div>
-    <div class="mb-3">
-      <label for="usuario" class="form-label">Usuario</label>
-      <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right"
-        data-bs-title="Aqui va el contenido del tooltip"></i>
-      <input type="email" class="form-control" id="usuario">
+</section>
 
-      <label for="exampleFormControlInput1" class="form-label">Email</label>
-      <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right"
-        data-bs-title="Aqui va el contenido del tooltip"></i>
-      <input type="email" class="form-control" id="exampleFormControlInput1">
-    </div>
-    <div class="mb-3">
-      <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-      <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right"
-        data-bs-title="Aqui va el contenido del tooltip"></i>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-    </div>
-
-    <div class="form-check">
-
-      <label class="form-check-label text-decoration-underline" for="flexCheckDefault" data-bs-toggle="modal"
-        data-bs-target="#condiciones">
-        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">Acepto los términos y condiciones
-      </label>
-    </div>
-
-    <button type="button" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
-  </form>
-
+ 
   <!-- Modal -->
   <div class="modal" tabindex="-1" id="condiciones">
     <div class="modal-dialog">
