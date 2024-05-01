@@ -287,32 +287,27 @@ h6 {
   <div class="row">
     <!-- Formulario de contacto -->
     <article class="col-md-6 col-12">
-      <form action="#" method="POST" class="form-group">
-        <div class="row g-3 align-items-center">
-          <div class="col-6">
-            <label for="usuario" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="usuario">
-          </div>
-          <div class="col-6">
-            <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1">
-          </div>
-          <div class="col-12">
-            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-              <label class="form-check-label text-decoration-underline" for="flexCheckDefault">
-                Acepto los términos y condiciones
-              </label>
-            </div>
-          </div>
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary">Enviar</button>
-          </div>
+       <form action="#">
+        <!-- Campos del formulario -->
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1">
         </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        
+        <!-- Checkbox para abrir el modal de Términos y Condiciones -->
+        <div class="form-check mb-3">
+          <input class="form-check-input" type="checkbox" id="flexCheckDefault" data-bs-toggle="modal" data-bs-target="#condiciones">
+          <label class="form-check-label text-decoration-underline" for="flexCheckDefault">
+            Leer Términos y Condiciones
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </label>
+        </div>
+        
+        
       </form>
     </article>
 
@@ -345,37 +340,40 @@ h6 {
 </section>
 
  
-  <!-- Modal -->
-  <div class="modal" tabindex="-1" id="condiciones">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Términos y condiciones</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        </div>
+  <!-- Modal para los Términos y Condiciones -->
+<div class="modal fade" id="condiciones" tabindex="-1" aria-labelledby="condicionesLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="condicionesLabel">Términos y Condiciones</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Aquí van los términos y condiciones de uso.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>
 
   <!--jQuery si es necesario para otros scripts -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
   <script type="module" src="assets/js/index.js"></script>
 
+<!--script de modal-->
   <script>
-    var myModal = new bootstrap.Modal(document.getElementById('condiciones'), {
-      keyboard: false
-    });
-
-    // Opcional: código para abrir el modal automáticamente o bajo ciertas condiciones
-    myModal.show();
-  </script>
+document.addEventListener('DOMContentLoaded', function () {
+  var myModal = new bootstrap.Modal(document.getElementById('condiciones'), {
+    keyboard: false
+  });
+  // Descomenta la siguiente línea si quieres que el modal se muestre automáticamente
+  // myModal.show();
+});
+</script>
 
 </body>
 
