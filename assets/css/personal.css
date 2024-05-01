@@ -7,3 +7,106 @@
     height: 300px;
   }
 }/*# sourceMappingURL=personal.css.map */
+
+.body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  background-color: #130d0d;
+  color: #fff;
+}
+
+.card__img {
+  width: 100%;
+  /* hace que la imagen siempre llene el ancho del contenedor */
+  height: 160px;
+  /* altura fija para todas las imágenes */
+  object-fit: cover;
+  /* asegura que la imagen cubra completamente el espacio sin distorsionarse */
+}
+
+.testimonial__image {
+  width: 80px;
+  /* Ajusta el tamaño de la imagen */
+  height: 80px;
+  /* Asegura que la imagen sea un círculo perfecto */
+  border-radius: 50%;
+  /* Hace que la imagen sea completamente redonda */
+  border: 3px solid white;
+  /* Borde blanco */
+  display: inline-block;
+  /* Asegura que la imagen no tome más espacio del necesario */
+  margin-top: 20px;
+  /* Espacio sobre la imagen */
+}
+
+.testimonios__h6 {
+  margin-top: 10px;
+  /* Espacio entre la imagen y el nombre */
+}
+
+.contact__info .contact__item {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* Espacio entre el ícono y el texto */
+}
+
+.contact__info i {
+  color: #333;
+  /* O el color que prefieras */
+  font-size: 24px;
+  /* Ajusta el tamaño de los íconos */
+}
+
+.contact__info h5 {
+  margin: 0;
+  /* Elimina márgenes adicionales para una alineación limpia */
+}
+
+.form-group {
+  padding: 20px;
+  background-color: #4e4f51;
+  border-radius: 5px;
+  /* Estilos opcionales para dar estilo al formulario */
+}
+
+.text-container {
+  padding: 20px;
+  /* Añade un poco de padding para no pegar el texto a los bordes */
+  height: 300px;
+  /* Asegura que el contenedor de texto tenga la misma altura que la imagen, ajusta según sea necesario */
+  overflow-y: auto;
+  /* Permite el desplazamiento vertical si el texto es muy largo */
+}
+
+@media (max-width: 767px) {
+  .text-container {
+    height: auto;
+    /* En dispositivos pequeños, permite que el texto tome la altura que necesite */
+  }
+}
+.quien-somos__container, 
+.card__container,  
+.testimonios__container,
+.contacto__container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* Estilo original de la navbar */
+.navbar {
+background-color: transparent; /* Transparente cuando no está en 'main' */
+transition: background-color 0.3s; /* Transición suave */
+}
+
+/* Nuevo estilo cuando está sobre 'main' */
+.nav-colored {
+background-color: #666; /* Cambia esto por el color deseado cuando esté sobre 'main' */
+}
+/* Aplicar color de texto y alineación al centro a los títulos y párrafos dentro de los modales */
+.modal__p, .modal-title {
+  color: black; /* Define el color del texto */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
