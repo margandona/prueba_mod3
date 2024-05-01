@@ -1,147 +1,389 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>desafio guiado 02</title>
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/personal.css">
-    <script src="https://kit.fontawesome.com/604374b1e0.js" crossorigin="anonymous"></script>
-    <link rel="assets/img/logo.png" href="favicon.ico" type="image/x-icon">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>desafio guiado 02</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/personal.css">
+  <script src="https://kit.fontawesome.com/604374b1e0.js" crossorigin="anonymous"></script>
+  <link rel="assets/img/logo.png" href="favicon.ico" type="image/x-icon">
+  <!-- FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <style>
+    .body{
+      margin: 0px; 
+      padding: 0px;
+      border: 0px;
+      background-color: #130d0d;
+      color: #fff;
+    }
+    .card--img {
+            width: 100%;  /* hace que la imagen siempre llene el ancho del contenedor */
+            height: 160px;  /* altura fija para todas las imágenes */
+            object-fit: cover;  /* asegura que la imagen cubra completamente el espacio sin distorsionarse */
+        }
+        .testimonial-image {
+  width: 80px;  /* Ajusta el tamaño de la imagen */
+  height: 80px; /* Asegura que la imagen sea un círculo perfecto */
+  border-radius: 50%; /* Hace que la imagen sea completamente redonda */
+  border: 3px solid white; /* Borde blanco */
+  display: inline-block; /* Asegura que la imagen no tome más espacio del necesario */
+  margin-top: 20px; /* Espacio sobre la imagen */
+}
+
+h6 {
+  margin-top: 10px; /* Espacio entre la imagen y el nombre */
+}
+
+  </style>
 </head>
-<body>
+
+<body class="body">
 
   <!--barra de navegación responsiva-->
   <nav class="navbar navbar-expand-md fixed-top">
     <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="#" style="gap: 10px;">
-            <img src="assets/img/logo.png" alt="Logo" width="25px">
-            <h1 style="margin-bottom: 0;">Viajes Chile</h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-            <i class="fa-solid fa-bars text-white"></i>
-        </button>
-        <div id="navmenu" class="collapse navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"> <a href="#inicio" class="nav-link"> Inicio</a> </li>
-                <li class="nav-item"> <a href="#habilidades" class="nav-link"> Mis Habilidades</a> </li>
-                <li class="nav-item"> <a href="#proyectos" class="nav-link">Mis Proyectos</a> </li>
-                <li class="nav-item"> <a href="#contacto" class="nav-link">Contacto</a> </li>
-            </ul>
+      <a class="navbar-brand d-flex align-items-center" href="#" style="gap: 10px;">
+        <img src="assets/img/logo.png" alt="Logo" width="25px">
+        <h1 style="margin-bottom: 0;">Viajes Chile</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
+        <i class="fa-solid fa-bars text-white"></i>
+      </button>
+      <div id="navmenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"> <a href="#inicio" class="nav-link"> Inicio</a> </li>
+          <li class="nav-item"> <a href="#habilidades" class="nav-link"> Mis Habilidades</a> </li>
+          <li class="nav-item"> <a href="#proyectos" class="nav-link">Mis Proyectos</a> </li>
+          <li class="nav-item"> <a href="#contacto" class="nav-link">Contacto</a> </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Carusel-->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+        aria-label="Slide 5"></button>
+
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/carrusel-1.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/carrusel-2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/carrusel-3.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/carrusel-4.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/carrusel-5.jpeg" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!--QUIENES SOMOS-->
+  <section>
+    <h2 class="" style="text-align: center;">Quienes Somos</h2>
+    <hr style="height: 2px;">
+    <section class="container" id="">
+      <div class="row">
+        <article class="col-md-6 col-12">
+          <img src="assets/img/mujer.webp" alt="" style="height: 300px; width: 350px;">
+        </article>
+        <article class="col-md-6 col-12">
+
+          <p>Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Iusto laborum porro
+            illo consequuntur est asperiores labore
+            consequatur molestiae perferendis,
+            repellendus fuga ducimus incidunt
+            eligendi facilis culpa, voluptatum
+            itaque vel? Numquam.</p>
+          <p>Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Ex beatae totam maxime,
+            nulla quam soluta vel facere fugit deleniti,
+            neque atque sequi deserunt doloribus porro
+            quaerat iusto recusandae sint laborum?</p>
+        </article>
+      </div>
+    </section>
+  </section>
+
+  <!--CARDS-->
+  <section class="container">
+    <h2 style="text-align: center;">Destacados</h2>
+    <hr style="height: 2px;">
+
+    <div class="row">
+        <!-- Tarjeta 1 -->
+        <div class="col-sm-6">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="assets/img/card1.jpeg" class="img-fluid rounded-start card--img" alt="Descriptive Image Alt Text">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="col-sm-6">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="assets/img/card2.jpg" class="img-fluid rounded-start card--img" alt="Descriptive Image Alt Text">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</nav>
+    <!-- se Repiten las otras filas -->
+    <div class="row">
+        <!-- Tarjeta 1 -->
+        <div class="col-sm-6">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="assets/img/card1.jpeg" class="img-fluid rounded-start card--img" alt="Descriptive Image Alt Text">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="col-sm-6">
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="assets/img/card2.jpg" class="img-fluid rounded-start card--img" alt="Descriptive Image Alt Text">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
 
-    <!--Carusel-->
-    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+<section class="container">
+  <h2 style="text-align: center;">Testimonios</h2>
+  <hr style="height: 2px;">
+
+  <div class="row">
+    <div class="col-lg-4 col-12 text-center">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quam nisi maxime at, eum nihil unde dolorum ducimus vero, sequi iure ad quis, adipisci voluptate. Perspiciatis iure porro enim officia!</p>
+      <img src="assets/img/testimonio1.avif" alt="Mariela" class="rounded-circle testimonial-image">
+      <h6>Mariela</h6>
+    </div>
+    <div class="col-lg-4 col-12 text-center">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quam nisi maxime at, eum nihil unde dolorum ducimus vero, sequi iure ad quis, adipisci voluptate. Perspiciatis iure porro enim officia!</p>
+      <img src="assets/img/testimonio2.avif" alt="Christian" class="rounded-circle testimonial-image">
+      <h6>Christian</h6>
+    </div>
+    <div class="col-lg-4 col-12 text-center">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia quam nisi maxime at, eum nihil unde dolorum ducimus vero, sequi iure ad quis, adipisci voluptate. Perspiciatis iure porro enim officia!</p>
+      <img src="assets/img/testimonio3.jpg" alt="Fernanda" class="rounded-circle testimonial-image">
+      <h6>Fernanda</h6>
+    </div>
+  </div>
+</section>
+
+<!--contacto-->
+<section class="container contenedor__contacto"  >
+  <h2 class="text-center">Contacto </h2>
+  <div class="row fila" >
+      
+      <article class="col-md-6 col-12" >
+          <form action="submit" class="form-group">
+              <div id="liveAlertPlaceholder" class="row g-3 align-items-center contenedor__form" >
+                  
+                  <div class="col-6">
+                    <label for="usuario" class="form-label">Usuario</label>
+      <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right"
+        data-bs-title="Aqui va el contenido del tooltip"></i>
+      <input type="email" class="form-control" id="usuario">
+                  </div>
+                  
+                    <div class="col-6 ">
+                      <label for="exampleFormControlInput1" class="form-label">Email</label>
+      <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right"
+        data-bs-title="Aqui va el contenido del tooltip"></i>
+      <input type="email" class="form-control" id="exampleFormControlInput1">
+                    </div>
+                  
+                </div>
+                <div class="col-12">
+                  <input type="email" class="form-control form-control__email" placeholder="Correo Electrónico" >
+                </div>
+                <div class="col-12">
+                  <textarea name="" id="" cols="30" rows="10" class="form-control form-control__textarea" ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary mb-3">Enviar</button>
+          </form>
+      </article>
+      <article class="col-md-6 col-12">
+          <article class="article">
+              <div class="contact-item">
+                  <i class="fa-solid fa-phone"></i>
+                  <h5>+56999887766</h5>
+              </div>
+              <div class="contact-item">
+                  <i class="fa-solid fa-envelope"></i>
+                  <h5>tumail@gmail.com</h5>
+              </div>
+              <div class="contact-item">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <h5>tulinkedin</h5>
+              </div>
+              <div class="contact-item">
+                  <i class="fa-brands fa-github"></i>
+                  <h5>Tu Github</h5>
+              </div>
+              <div class="contact-item">
+                  <i class="fa-brands fa-square-instagram"></i>
+                  <h5>Tu Instagram</h5>
+              </div>
+          </article>
           
+      
+      
+     
+  </div>
+ </section>
+  <!-- Formulario de contacto-->
+  <form action="">
+    <h2>Contacto</h2>
+    <div id="liveAlertPlaceholder"></div>
+    <div class="mb-3">
+      <label for="usuario" class="form-label">Usuario</label>
+      <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right"
+        data-bs-title="Aqui va el contenido del tooltip"></i>
+      <input type="email" class="form-control" id="usuario">
+
+      <label for="exampleFormControlInput1" class="form-label">Email</label>
+      <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right"
+        data-bs-title="Aqui va el contenido del tooltip"></i>
+      <input type="email" class="form-control" id="exampleFormControlInput1">
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
+      <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right"
+        data-bs-title="Aqui va el contenido del tooltip"></i>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+
+    <div class="form-check">
+
+      <label class="form-check-label text-decoration-underline" for="flexCheckDefault" data-bs-toggle="modal"
+        data-bs-target="#condiciones">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">Acepto los términos y condiciones
+      </label>
+    </div>
+
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
+  </form>
+
+  <!-- Modal -->
+  <div class="modal" tabindex="-1" id="condiciones">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Términos y condiciones</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="assets/img/carrusel-1.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/carrusel-2.jpg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/carrusel-3.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/carrusel-4.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="assets/img/carrusel-5.jpeg" class="d-block w-100" alt="...">
-            <div class="carousel-caption d-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-
-
-      <!-- Formulario de contacto-->
-      <form action="">
-        <h2>Contacto</h2>
-        <div id="liveAlertPlaceholder"></div>
-        <div class="mb-3">
-            <label for="usuario" class="form-label">Usuario</label>
-            <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="aqui va el contenido del tooltips"></i>
-            <input type="email" class="form-control" id="usuario">
-
-            <label for="exampleFormControlInput1" class="form-label">Email</label>
-            <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="aqui va el contenido del tooltips"></i>
-            <input type="email" class="form-control" id="exampleFormControlInput1">
-          </div>
-          <div class="mb-3">
-            <label for="exampleFormControlTextarea1" class="form-label">Mensaje</label>
-            <i class="fa-solid fa-circle-info" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="aqui va el contenido del tooltips"></i>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-          </div>
-
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label text-decoration-underline" for="flexCheckDefault"  data-bs-toggle="modal"   data-bs-target="#condiciones">
-              Acepto los terminos y condiciones
-            </label>
-          </div>
-
-         
-          <button type="button" class="btn btn-primary" id="liveAlertBtn">Enviar</button>
-
-      </form>
-
-      <!--Modal-->
-      <div class="modal" tabindex="-1" id="condiciones">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Terminos y condiciones</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam similique molestiae illo dolorum rem maxime laboriosam cumque amet fuga, dolorem exercitationem ipsam earum mollitia alias doloribus vitae nisi adipisci dolores..</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              
-            </div>
-          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
         </div>
       </div>
+    </div>
+  </div>
 
-    <script type="module" src="assets/js/index.js"></script>
-   
+  <!--jQuery si es necesario para otros scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script type="module" src="assets/js/index.js"></script>
+
+  <script>
+    var myModal = new bootstrap.Modal(document.getElementById('condiciones'), {
+      keyboard: false
+    });
+
+    // Opcional: código para abrir el modal automáticamente o bajo ciertas condiciones
+    myModal.show();
+  </script>
+
 </body>
+
 </html>
